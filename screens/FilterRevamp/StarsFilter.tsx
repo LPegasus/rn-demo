@@ -13,7 +13,7 @@ export function StarsFilter(
 
   const allStars: JSX.Element[] = [];
   for (let i = 0; i < starCount; i++) {
-    allStars.push(<Star style={starStyle} />);
+    allStars.push(<Star key={i} style={starStyle} />);
   }
 
   const title = (

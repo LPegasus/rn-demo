@@ -47,6 +47,7 @@ export function FilterSearchCriteria(props: FilterSearchCriteriaPropsType) {
           {[5, 4, 3, 2, 1].map((d) => {
             return (
               <StarsFilter
+                key={String(d)}
                 starCount={d}
                 active={activeFilters.includes(`star:${d}`)}
                 count={666}
