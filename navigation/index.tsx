@@ -12,7 +12,7 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
-import { ColorSchemeName, Pressable } from "react-native";
+import { ColorSchemeName, Pressable, View } from "react-native";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
@@ -30,6 +30,7 @@ import {
 import LinkingConfiguration from "./LinkingConfiguration";
 import { MeScreen } from "../screens/MeScreen";
 import { EventDetailScreen } from "../screens/EventDetailScreen";
+import { FilterRevampScreen } from "../screens/FilterRevampScreen";
 
 export default function Navigation({
   colorScheme,
@@ -84,6 +85,11 @@ function RootNavigator() {
         name="Detail"
         component={EventDetailScreen}
         options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FilterRevamp"
+        component={FilterRevampScreen}
+        options={{ headerBackground: () => <View /> }}
       />
 
       <Stack.Group screenOptions={{ presentation: "modal" }}>

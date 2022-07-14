@@ -24,6 +24,7 @@ export type RootStackParamList = {
   SearchPanel: {};
   Me: undefined;
   Detail: { id: string };
+  FilterRevamp: {};
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

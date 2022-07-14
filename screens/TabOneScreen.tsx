@@ -38,6 +38,12 @@ export default function TabOneScreen({
           navigation.push("Detail", { id: "" });
         }}
       />
+      <Button
+        title="Goto Filter"
+        onPress={() => {
+          navigation.push("FilterRevamp", {});
+        }}
+      />
     </View>
   );
 }
