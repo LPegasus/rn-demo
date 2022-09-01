@@ -30,6 +30,8 @@ import {
 import LinkingConfiguration from "./LinkingConfiguration";
 import { MeScreen } from "../screens/MeScreen";
 import { EventDetailScreen } from "../screens/EventDetailScreen";
+import { InputTestScreen } from "../screens/InputTestScreen";
+import { FlattenAutoPlayScreen } from "../screens/FlattenAutoPlayScreen";
 
 export default function Navigation({
   colorScheme,
@@ -85,6 +87,12 @@ function RootNavigator() {
         component={EventDetailScreen}
         options={{ headerShown: false }}
       />
+      <Stack.Screen
+        name="InputTest"
+        component={InputTestScreen}
+        options={{ headerShown: true }}
+      />
+      <Stack.Screen name="FlattenAutoPlay" component={FlattenAutoPlayScreen} />
 
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />

@@ -32,7 +32,9 @@ const linking: LinkingOptions<RootStackParamList> = {
       Feeds: 'feeds',
       Modal: 'modal',
       Detail: 'detail',
+      InputTest: 'input-test',
       NotFound: '*',
+      FlattenAutoPlay: 'flatten-auto-play'
     },
   },
 };

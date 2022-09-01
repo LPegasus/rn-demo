@@ -24,6 +24,8 @@ export type RootStackParamList = {
   SearchPanel: {};
   Me: undefined;
   Detail: { id: string };
+  InputTest: undefined;
+  FlattenAutoPlay: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

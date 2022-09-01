@@ -38,6 +38,18 @@ export default function TabOneScreen({
           navigation.push("Detail", { id: "" });
         }}
       />
+      <Button
+        title="Goto InputTest"
+        onPress={() => {
+          navigation.push("InputTest");
+        }}
+      />
+      <Button
+        title="Goto autoplay"
+        onPress={() => {
+          navigation.push("FlattenAutoPlay");
+        }}
+      />
     </View>
   );
 }
