@@ -2,16 +2,14 @@ import { Button, StyleSheet } from "react-native";
 
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
+import { Video } from "./FlattenAutoPlay/Video";
 import { RootTabScreenProps } from "../types";
 
 export default function TabOneScreen({
   navigation,
 }: RootTabScreenProps<"TabOne">) {
   return (
-    <View
-      style={styles.container}
-      onLayout={(e) => console.log(e.nativeEvent.layout.height)}
-    >
+    <View style={styles.container}>
       <View>
         <Button
           title="Goto Feed"
@@ -50,6 +48,7 @@ export default function TabOneScreen({
           navigation.push("FlattenAutoPlay");
         }}
       />
+      <Video dur={3000} isPlaying={true} />
     </View>
   );
 }

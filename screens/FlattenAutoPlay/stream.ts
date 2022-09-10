@@ -13,7 +13,9 @@ export const StreamContext = createContext<{
   changed$: Observable<ViewToken>;
   scroll$: Observable<void>;
   activeIdsChange$: Observable<string[]>;
+  playingId$: Observable<{ id: string, type: 'end' | 'start' } | null>;
   reportLayout: (ref: View, id: string) => void;
+  handleVideoPlayEnd: (id: ItemType['id']) => void;
 }>(null as any);
 
 export type UnpackContextValueType<T> = T extends React.Context<infer U> ? U : never;
@@ -24,4 +26,10 @@ export type CardPos = {
   height: number;
   width: number;
   id: string;
+}
+
+export interface ItemType {
+  id: string;
+  type: "img" | "video";
+  dur: number;
 }
